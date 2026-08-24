@@ -20,6 +20,7 @@
     jq
     nemo
     imagemagick
+    wl-crosshair
   ];
 
   services = {

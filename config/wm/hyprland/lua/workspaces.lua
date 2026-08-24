@@ -21,8 +21,15 @@ hl.window_rule({ match = { class = "zen" }, workspace = "3" })
 
 hl.window_rule({ match = { class = "steam" }, workspace = "4 silent" })
 
-hl.window_rule({ match = { class = "Spotify" }, workspace = "5 silent" })
-hl.window_rule({ match = { class = "spotify" }, workspace = "5 silent" })
+hl.window_rule({ match = { class = "Spotify" }, workspace = "special:magic silent" })
+hl.window_rule({ match = { class = "spotify" }, workspace = "special:magic silent" })
+
+hl.window_rule({ match = { class = "org.keepassxc.KeePassXC" }, workspace = "6 silent" })
+
+hl.window_rule({
+	match = { initial_class = "vesktop", initial_title = "Discord Popout" },
+	workspace = "6",
+})
 
 hl.window_rule({
 	name = "design",
@@ -30,20 +37,7 @@ hl.window_rule({
 	workspace = "6 silent",
 })
 
-hl.window_rule({
-	name = "game",
-	match = { tag = "game" },
-	immediate = true,
-	fullscreen = true,
-	workspace = "7 silent",
-	monitor = monitor_primary,
-	render_unfocused = true,
-	idle_inhibit = "always",
-})
-
 hl.window_rule({ match = { class = "nemo" }, workspace = "9 silent" })
-
-hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" }, workspace = "special:magic" })
 
 hl.window_rule({ match = { class = "org.speedcrunch." }, workspace = "special:scratchpad" })
 hl.window_rule({
@@ -54,4 +48,4 @@ hl.window_rule({
 	fullscreen_state = "1",
 })
 
-hl.window_rule({ match = { class = "com.obsproject.Studio" }, workspace = "special:obs" })
+hl.window_rule({ match = { class = "com.obsproject.Studio" }, workspace = "special:obs silent" })

@@ -23,7 +23,10 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [
+    "kvm-intel"
+    "ntsync"
+  ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
@@ -45,7 +48,18 @@
     ];
   };
 
-  swapDevices = [ ];
+  fileSystems."/home/lotus/.cache/games" = {
+    device = "/gamecache";
+    fsType = "none";
+    options = [ "bind" ];
+  };
+
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 8192;
+    }
+  ];
 
   zramSwap = {
     enable = true;

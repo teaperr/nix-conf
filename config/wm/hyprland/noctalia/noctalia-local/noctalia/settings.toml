@@ -222,16 +222,16 @@ transition_on_startup = true
     interval_seconds = 600
 
     [wallpaper.default]
-    path = "/home/lotus/hm/assets/wallpapers/snow leopards.jpg"
+    path = "/home/lotus/hm/assets/wallpapers/snow-leopard-dujsy3rj6rzh8c3l.jpg"
 
     [wallpaper.last]
-    path = "/home/lotus/hm/assets/wallpapers/snow leopards.jpg"
+    path = "/home/lotus/hm/assets/wallpapers/snow-leopard-dujsy3rj6rzh8c3l.jpg"
 
     [wallpaper.monitors.DP-3]
-    path = "/home/lotus/hm/assets/wallpapers/snow leopards.jpg"
+    path = "/home/lotus/hm/assets/wallpapers/snow-leopard-dujsy3rj6rzh8c3l.jpg"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/lotus/hm/assets/wallpapers/snow leopards.jpg"
+    path = "/home/lotus/hm/assets/wallpapers/snow-leopard-dujsy3rj6rzh8c3l.jpg"
 
 [widget.bluetooth]
 capsule = true

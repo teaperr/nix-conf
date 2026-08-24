@@ -14,6 +14,10 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     lanzaboote.url = "github:nix-community/lanzaboote";
     hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
     awww.url = "git+https://codeberg.org/LGFae/awww";
     noctalia.url = "github:noctalia-dev/noctalia";
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
@@ -21,6 +25,8 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    tailor.url = "github:teaperr/tailor";
+    funplayer.url = "path:/home/lotus/folder/funplayer";
   };
 
   outputs =
@@ -37,6 +43,8 @@
       hyprland,
       noctalia,
       zen-browser,
+      funplayer,
+      tailor,
       ...
     }@inputs:
     {
@@ -82,6 +90,7 @@
           nixvim.homeModules.nixvim
           nixcord.homeModules.nixcord
           spicetify-nix.homeManagerModules.spicetify
+          tailor.homeManagerModules.default
         ];
         extraSpecialArgs = { inherit inputs; };
       };

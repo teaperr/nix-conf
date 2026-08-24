@@ -1,5 +1,6 @@
 {
   "Applications": [
+    "/home/lotus/.nix-profile/share/applications/spotify.desktop",
     "/home/lotus/.nix-profile/share/applications/librewolf.desktop"
   ]
 }

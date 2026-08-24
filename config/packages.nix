@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
@@ -18,17 +18,20 @@
     dolphin-emu
     kdePackages.kdenlive
     mesa-demos
-    # bottles
-    # freecad
     wineWow64Packages.staging
     audacity
     openvpn
+    kicad
 
     (python3.withPackages (ps: with ps; [ pygobject3 ]))
 
     gtk4
     gtk4-layer-shell
   ];
+
+  imports = [ inputs.funplayer.homeManagerModules.default ];
+  programs.funplayer.enable = true;
+  programs.tailor.enable = true;
 
   programs.home-manager.enable = true;
 }

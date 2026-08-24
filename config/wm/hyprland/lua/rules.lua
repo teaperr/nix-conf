@@ -37,12 +37,20 @@ hl.window_rule({ name = "gametag", match = { class = "^(steam_.*|cs2|tf_*|gamesc
 -- design programs
 hl.window_rule({
 	name = "designtag",
-	match = { class = "^(org.kde.kdenlive|org.freecad.FreeCAD|OrcaSlicer|losslesscut|FunPlayer)$" },
-	tag =
-	"+design"
+	match = { class = "^(org.kde.kdenlive|org.freecad.FreeCAD|OrcaSlicer|losslesscut|FunPlayer|.virt-manager-wrapped|LosslessCut|orca-slicer|kicad)$" },
+	tag = "+design"
 })
 
 -- floating window rules
+hl.window_rule({
+	name = "kdenlive-dialog-minsize",
+	match = {
+		title = "^Kdenlive$",
+		float = true,
+	},
+	min_size = "1000 650",
+})
+
 hl.window_rule({ match = { title = "^(Open File)(.*)$" }, center = true })
 hl.window_rule({ match = { title = "^(Open File)(.*)$" }, float = true })
 hl.window_rule({ match = { title = "^(Select a File)(.*)$" }, center = true })

@@ -3,6 +3,9 @@ monitor_primary   = "desc:AOC 24G2W1G4 0x00016A47"
 monitor_secondary = "desc:Ancor Communications Inc ASUS VS228 E8LMTF150829"
 
 -- imports
+noctalia          = require("noctalia")
+noctalia.apply_theme()
+
 require("config.keybinds")
 require("config.games")
 require("config.autostart")
@@ -27,8 +30,6 @@ hl.monitor({
 })
 
 -- ── Environment ─────────────────────────────────────────────────────
-hl.env("XCURSOR_SIZE", "18")
-hl.env("XCURSOR_THEME", "Catppuccin-Mocha-Dark-Cursors")
 -- hl.env("QT_QPA_PLATFORM", "wayland")
 -- hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 -- hl.env("GDK_BACKEND", "wayland,x11")
@@ -67,6 +68,10 @@ hl.config({
 		gaps_out      = 8,
 		border_size   = 2,
 		allow_tearing = false,
+	},
+
+	xwayland = {
+		use_nearest_neighbor = false,
 	},
 
 	input = {

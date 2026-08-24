@@ -108,6 +108,7 @@
       "ydotool"
       "plugdev"
       "dialout"
+      "libvirtd"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [
@@ -159,6 +160,8 @@
     pulseaudio
     linuxPackages.cpupower
     networkmanager-openvpn
+
+    virtio-win
   ];
 
   services.openssh.enable = true;
@@ -166,4 +169,9 @@
   networking.firewall.enable = false;
 
   system.stateVersion = "26.05";
+
+  # qemu
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
+  programs.virt-manager.enable = true;
 }

@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }:
 {
@@ -23,10 +24,14 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.csgo-vulkan-fix
+    ];
+
     configType = "lua";
     extraConfig = ''
-      			require("config.main")
-      		'';
+      require("config.main")
+    '';
   };
 
   xdg.portal = {
